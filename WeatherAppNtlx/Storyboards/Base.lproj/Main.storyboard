@@ -35,43 +35,41 @@
                                                         <action selector="loadHistoryButtonTapped:" destination="Xfs-vi-qha" eventType="touchUpInside" id="Ty8-Fz-1fM"/>
                                                     </connections>
                                                 </button>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wAy-O0-NcW">
-                                                    <rect key="frame" x="14" y="11" width="140.5" height="44"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eeE-m5-VUp">
+                                                    <rect key="frame" x="14" y="11" width="135.5" height="18"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eeE-m5-VUp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="140.5" height="18"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Petrozavodsk" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-2M-Ysg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="18"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=", 34ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N5-0w-dES">
-                                                                    <rect key="frame" x="99" y="0.0" width="41.5" height="18"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.01.2020 16:52:48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5H-cY-4mb">
-                                                            <rect key="frame" x="0.0" y="26" width="140.5" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petrozavodsk" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-2M-Ysg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="93" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=", 34ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N5-0w-dES">
+                                                            <rect key="frame" x="94" y="0.0" width="41.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.01.2020 16:52:48" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5H-cY-4mb">
+                                                    <rect key="frame" x="14" y="37" width="140.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="wAy-O0-NcW" secondAttribute="bottom" constant="12" id="2qv-Km-5of"/>
-                                                <constraint firstItem="mJH-Ln-DOx" firstAttribute="leading" secondItem="wAy-O0-NcW" secondAttribute="trailing" constant="196" id="E9j-4B-s35"/>
+                                                <constraint firstItem="l5H-cY-4mb" firstAttribute="top" secondItem="eeE-m5-VUp" secondAttribute="bottom" constant="8" symbolic="YES" id="02B-jd-Zdg"/>
+                                                <constraint firstItem="l5H-cY-4mb" firstAttribute="leading" secondItem="W0s-cd-1eG" secondAttribute="leading" constant="14" id="0DJ-K7-OGp"/>
+                                                <constraint firstItem="eeE-m5-VUp" firstAttribute="leading" secondItem="W0s-cd-1eG" secondAttribute="leading" constant="14" id="0w5-ZA-QCQ"/>
+                                                <constraint firstItem="mJH-Ln-DOx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W0s-cd-1eG" secondAttribute="leading" constant="20" symbolic="YES" id="7at-bU-HDc"/>
+                                                <constraint firstItem="eeE-m5-VUp" firstAttribute="top" secondItem="W0s-cd-1eG" secondAttribute="top" constant="11" id="Dtv-rZ-COz"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l5H-cY-4mb" secondAttribute="trailing" constant="20" symbolic="YES" id="I5E-mM-kRs"/>
                                                 <constraint firstAttribute="bottom" secondItem="mJH-Ln-DOx" secondAttribute="bottom" constant="18" id="JjC-VC-NIg"/>
-                                                <constraint firstItem="wAy-O0-NcW" firstAttribute="leading" secondItem="W0s-cd-1eG" secondAttribute="leading" constant="14" id="MIH-En-5lM"/>
                                                 <constraint firstItem="mJH-Ln-DOx" firstAttribute="top" secondItem="W0s-cd-1eG" secondAttribute="top" constant="18" id="Mu6-Nb-wGr"/>
                                                 <constraint firstAttribute="trailing" secondItem="mJH-Ln-DOx" secondAttribute="trailing" constant="20" symbolic="YES" id="bst-Xq-X1n"/>
-                                                <constraint firstItem="wAy-O0-NcW" firstAttribute="top" secondItem="W0s-cd-1eG" secondAttribute="top" constant="11" id="x9h-He-Ga1"/>
+                                                <constraint firstAttribute="bottom" secondItem="l5H-cY-4mb" secondAttribute="bottom" constant="12" id="o0l-aX-exA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
