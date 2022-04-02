@@ -195,7 +195,7 @@ extension MainViewController: UITableViewDataSource {
             temperature = temp * 1.8 + 32
         }
         
-        let tempFarenheits = ", \(temperature ?? 0.0)ºF)"
+        let tempFarenheits = ", \(temperature ?? 0.0)ºF"
         
         var convertedText: String {
             temperatureChangeSwitch.isOn ? tempCelsius : tempFarenheits
