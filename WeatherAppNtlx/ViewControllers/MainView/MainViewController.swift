@@ -168,7 +168,6 @@ extension MainViewController: UISearchBarDelegate {
     }
 }
 
-
 //MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
