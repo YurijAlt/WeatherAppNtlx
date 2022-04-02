@@ -116,11 +116,11 @@ class MainViewController: UIViewController {
     }
     
     private func convertTemperatureToF() {
-        temperatureLabel.text = String(format: "%.1f", 32 + self.conditionCode * 1.8) + "º"
+        temperatureLabel.text = String(format: "%.0f", 32 + self.conditionCode * 1.8) + "º"
     }
     
     private func convertTemperatureToC() {
-        temperatureLabel.text = String(format: "%.1f", self.conditionCode) + "º"
+        temperatureLabel.text = String(format: "%.0f", self.conditionCode) + "º"
     }
     
     private func clearLabelsText() {
@@ -186,22 +186,16 @@ extension MainViewController: UITableViewDataSource {
             dateFormatter.locale = Locale.current
             formattedDate = dateFormatter.string(from: date)
         }
-        
-        let tempCelsius = ", \(city?.temperature ?? 0.0)ºC"
-        
-        var temperature: Double?
-     
+        let tempCelsius = ", " + String(format: "%.0f", city?.temperature ?? 0.0) + "ºC"
+        var temperature: Double = 0.0
         if let temp = city?.temperature {
             temperature = temp * 1.8 + 32
         }
-        
-        let tempFarenheits = ", \(temperature ?? 0.0)ºF"
-        
+        let tempFarenheits = ", " + String(format: "%.0f", temperature) + "ºF"
         var convertedText: String {
             temperatureChangeSwitch.isOn ? tempCelsius : tempFarenheits
         }
-    
-        cell.configure(city: city?.name ?? "", temperature: convertedText, date: formattedDate ?? "", historyButtonVisible: true)
+        cell.configure(city: city?.name ?? "", temperature: convertedText, date: formattedDate ?? "", historyButtonVisible: false)
         cell.delegate = self
         
         return cell
