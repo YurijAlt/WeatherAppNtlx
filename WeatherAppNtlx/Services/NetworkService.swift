@@ -21,18 +21,13 @@ class NetworkService: NetworkServiceProtocol {
     private let apiKey = "fa12b43efaac31a59f56cf50fc900364"
     
     func fetchCurrentWeather(for requestType: RequestType, completion: @escaping (Weather?) -> Void) {
-        
         var urlString: String
-        
         switch requestType {
         case .cityName(let city):
             urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
         case .coordinate(let latitude, let longitude):
             urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric"
         }
-        
-        print(urlString)
-        
         performRequest(withURLString: urlString) { data, error in
             if let error = error {
                 print("Error recieved requesting data: \(error.localizedDescription)")
@@ -41,8 +36,6 @@ class NetworkService: NetworkServiceProtocol {
             let decode = self.decodeJSON(type: Weather.self, from: data)
             completion(decode)
         }
-        
-        
     }
     
     private func performRequest(withURLString urlString: String, completion: @escaping (Data?, Error?) -> Void) {
@@ -68,7 +61,6 @@ class NetworkService: NetworkServiceProtocol {
         
         do {
             let objects = try decoder.decode(type.self, from: data)
-            print(objects)
             return objects
         } catch let jsonError {
             print("Failed to decode JSON", jsonError)

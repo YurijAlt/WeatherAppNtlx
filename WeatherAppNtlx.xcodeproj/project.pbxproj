@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C413F59A27F64B1F007E90DD /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413F59927F64B1E007E90DD /* LocationService.swift */; };
 		C4971B7F27EBB47300253908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4971B7E27EBB47300253908 /* AppDelegate.swift */; };
 		C4971B8127EBB47300253908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4971B8027EBB47300253908 /* SceneDelegate.swift */; };
 		C4971B8327EBB47300253908 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4971B8227EBB47300253908 /* MainViewController.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C413F59927F64B1E007E90DD /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		C4971B7B27EBB47300253908 /* WeatherAppNtlx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppNtlx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4971B7E27EBB47300253908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4971B8027EBB47300253908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,14 +51,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C413F59B27F6582C007E90DD /* TRASH */ = {
-			isa = PBXGroup;
-			children = (
-				C413F59927F64B1E007E90DD /* LocationService.swift */,
-			);
-			path = TRASH;
-			sourceTree = "<group>";
-		};
 		C4971B7227EBB47300253908 = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +132,6 @@
 			children = (
 				C4C8FAD827F275B90054C99B /* NetworkService.swift */,
 				C4C8FADB27F275DD0054C99B /* StorageService.swift */,
-				C413F59B27F6582C007E90DD /* TRASH */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -232,7 +221,6 @@
 				C4C8FAD027F271670054C99B /* MainViewPresenter.swift in Sources */,
 				C4C8FADE27F276060054C99B /* Weather.swift in Sources */,
 				C4C8FAD627F2728D0054C99B /* MainTableViewCell.swift in Sources */,
-				C413F59A27F64B1F007E90DD /* LocationService.swift in Sources */,
 				C4971B8927EBB47300253908 /* SavedCity.xcdatamodeld in Sources */,
 				C4C8FACE27F268210054C99B /* MainUINavigationController.swift in Sources */,
 				C4C8FADC27F275DD0054C99B /* StorageService.swift in Sources */,

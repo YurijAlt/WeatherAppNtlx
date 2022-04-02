@@ -12,9 +12,7 @@ protocol MainViewPresenterProtocol {
     init(view: MainViewProtocol, netwotkService: NetworkServiceProtocol, storageService: StorageServiceProtocol)
     func getCurrentWeather(requestType: RequestType)
     func fetchDataFromMemory()
-    
     func fetchDuplicates(city: String)
-    
     func saveCity(name: String, temperature: Double, date: Date)
     var weather: Weather? { get set }
     var cities: [CityWeather]? { get set }
@@ -65,12 +63,10 @@ class MainViewPresenter: MainViewPresenterProtocol {
                 self.cities = cities
             case .failure(let error):
                 self.view.failure(error: error)
-                
+
             }
         }
     }
-    
-    
     
     func saveCity(name: String, temperature: Double, date: Date) {
         storeService.save(name, temperature: temperature, date: date)

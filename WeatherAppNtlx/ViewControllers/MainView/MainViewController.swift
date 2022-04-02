@@ -60,10 +60,8 @@ class MainViewController: UIViewController {
         updateUI()
     }
     
-    
     //MARK: - IB Actions
     @IBAction func searchByLocationButtonTapped(_ sender: UIBarButtonItem) {
-        
         requestLocation()
         clearLabelsText()
         presenter.getCurrentWeather(requestType: .coordinate(latitude: latitude, longitude: longitude))
@@ -167,7 +165,6 @@ extension MainViewController: UISearchBarDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.saveCity()
         }
-        
     }
 }
 
@@ -225,7 +222,6 @@ extension MainViewController: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
-        print("Широта: \(latitude) | Долгота: \(longitude)")
         presenter.getCurrentWeather(requestType: .coordinate(latitude: latitude, longitude: longitude))
     }
     
@@ -245,14 +241,11 @@ extension MainViewController: MainViewProtocol {
         showAlert(with: "Ошибка", and: "Город не найден")
         clearLabelsText()
     }
-    
 }
-
 
 extension MainViewController: MainViewControllerDelegate {
     func fetchHistoryCities(city: String) {
         presenter.fetchDuplicates(city: city)
         mainTableView.reloadData()
     }
-    
 }

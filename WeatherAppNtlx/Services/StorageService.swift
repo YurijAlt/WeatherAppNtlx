@@ -10,9 +10,7 @@ import CoreData
 
 protocol StorageServiceProtocol {
     func fetchCitySearchHistory(completion: (Result<[CityWeather], Error>) -> Void)
-    
     func fetchDuplicateCitiesHistory(city: String, completion: (Result<[CityWeather], Error>) -> Void)
-    
     func save(_ name: String, temperature: Double, date: Date)
     func saveContext()
 }
@@ -45,11 +43,9 @@ class StorageService: StorageServiceProtocol {
             completion(.failure(error))
         }
     }
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     func fetchDuplicateCitiesHistory(city: String, completion: (Result<[CityWeather], Error>) -> Void) {
-        
         let predicate = NSPredicate(format: "%K == %@", #keyPath(CityWeather.name), city)
-        
         let fetchRequest: NSFetchRequest<CityWeather> = CityWeather.fetchRequest()
         fetchRequest.predicate = predicate
         do {
@@ -59,8 +55,6 @@ class StorageService: StorageServiceProtocol {
             completion(.failure(error))
         }
     }
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    
     
     //MARK: Save and delete Data
     func save(_ name: String, temperature: Double, date: Date) {
