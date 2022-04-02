@@ -5,7 +5,6 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="temperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
-    <fetchRequest name="FetchHistoryToOne" entity="CityWeather" predicateString="TRUEPREDICATE"/>
     <elements>
         <element name="CityWeather" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>

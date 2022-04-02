@@ -18,7 +18,7 @@ protocol StorageServiceProtocol {
 class StorageService: StorageServiceProtocol {
     //MARK: - CoreData Stack
     private let persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "SavedCity")
+        let container = NSPersistentContainer(name: "CityWeather")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

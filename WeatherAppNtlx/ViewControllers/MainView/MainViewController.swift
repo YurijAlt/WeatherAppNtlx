@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-//MARK: - MainViewControllerProtocol
+//MARK: - MainViewControllerDelegate
 protocol MainViewControllerDelegate {
     func fetchHistoryCities(city: String)
 }
@@ -160,6 +160,7 @@ extension MainViewController: UISearchBarDelegate {
         mainTableView.reloadData()
         presenter.getCurrentWeather(requestType: .cityName(city: searchBar.searchTextField.text ?? ""))
         clearLabelsText()
+        searchBar.searchTextField.text = ""
         setupActivityIndicator()
         updateUI()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -221,7 +222,6 @@ extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
-    
 }
 
 //MARK: - MainViewProtocol
@@ -236,6 +236,7 @@ extension MainViewController: MainViewProtocol {
     }
 }
 
+//MARK: - MainViewControllerDelegate
 extension MainViewController: MainViewControllerDelegate {
     func fetchHistoryCities(city: String) {
         presenter.fetchDuplicates(city: city)

@@ -11,7 +11,7 @@
 		C4971B8127EBB47300253908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4971B8027EBB47300253908 /* SceneDelegate.swift */; };
 		C4971B8327EBB47300253908 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4971B8227EBB47300253908 /* MainViewController.swift */; };
 		C4971B8627EBB47300253908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4971B8427EBB47300253908 /* Main.storyboard */; };
-		C4971B8927EBB47300253908 /* SavedCity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4971B8727EBB47300253908 /* SavedCity.xcdatamodeld */; };
+		C4971B8927EBB47300253908 /* CityWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4971B8727EBB47300253908 /* CityWeather.xcdatamodeld */; };
 		C4971B8B27EBB48300253908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4971B8A27EBB48300253908 /* Assets.xcassets */; };
 		C4971B8E27EBB48300253908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4971B8C27EBB48300253908 /* LaunchScreen.storyboard */; };
 		C4C8FACE27F268210054C99B /* MainUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FACD27F268200054C99B /* MainUINavigationController.swift */; };
@@ -78,7 +78,7 @@
 				C4C8FAD227F272020054C99B /* Storyboards */,
 				C4971B8F27EBB48300253908 /* Info.plist */,
 				C4971B8A27EBB48300253908 /* Assets.xcassets */,
-				C4971B8727EBB47300253908 /* SavedCity.xcdatamodeld */,
+				C4971B8727EBB47300253908 /* CityWeather.xcdatamodeld */,
 			);
 			path = WeatherAppNtlx;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				C4C8FAD027F271670054C99B /* MainViewPresenter.swift in Sources */,
 				C4C8FADE27F276060054C99B /* Weather.swift in Sources */,
 				C4C8FAD627F2728D0054C99B /* MainTableViewCell.swift in Sources */,
-				C4971B8927EBB47300253908 /* SavedCity.xcdatamodeld in Sources */,
+				C4971B8927EBB47300253908 /* CityWeather.xcdatamodeld in Sources */,
 				C4C8FACE27F268210054C99B /* MainUINavigationController.swift in Sources */,
 				C4C8FADC27F275DD0054C99B /* StorageService.swift in Sources */,
 				C4971B8127EBB47300253908 /* SceneDelegate.swift in Sources */,
@@ -444,13 +444,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C4971B8727EBB47300253908 /* SavedCity.xcdatamodeld */ = {
+		C4971B8727EBB47300253908 /* CityWeather.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				C4971B8827EBB47300253908 /* WeatherAppNtlx.xcdatamodel */,
 			);
 			currentVersion = C4971B8827EBB47300253908 /* WeatherAppNtlx.xcdatamodel */;
-			path = SavedCity.xcdatamodeld;
+			path = CityWeather.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
