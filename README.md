@@ -18,6 +18,7 @@ UIKit, UINavigationBar, UINavigationController, UITableViewController, UIAlertCo
 - Использованы UITableView с кастомными ячейками UITableViewCell.
 - Реализована возможность получения геолокоции устройства.
 - Добавлена функция переключения температуры ºF/ºC
+- Смена цвета фона верхнй части контрллера в зависимости от полученной с API температуры.
 - Отображение истории поиска в таблице, в том числе и отображение всей истории по выбранному городу
 - Отображение UIAlertController, если в стоке поиска города введены не корректные данные
 
@@ -30,5 +31,6 @@ UIKit, UINavigationBar, UINavigationController, UITableViewController, UIAlertCo
 - Used UITableView with custom UITableViewCell cells.
 - The possibility of obtaining the geolocation of the device is implemented.
 - Added the function of switching the temperature of °F/°C
+- Changing the background color of the upper part of the controller depending on the temperature received from the API.
 - Display of the search history in the table, including the display of the entire history for the selected city
 - Displaying the UIAlertController if incorrect data is entered in the city search bar
