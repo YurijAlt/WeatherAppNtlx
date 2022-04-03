@@ -99,7 +99,7 @@ class MainViewController: UIViewController {
             self.tempLoadingActivitiIndicator.stopAnimating()
             self.conditionCode = self.presenter.weather?.main.temp ?? 0
             self.cityNameLabel.text = self.presenter.weather?.name
-            self.temperatureLabel.text = String(format: "%.1f", self.conditionCode) + "º"
+            self.temperatureLabel.text = String(format: "%.0f", self.conditionCode) + "º"
             self.updateColorMainView()
         }
     }
